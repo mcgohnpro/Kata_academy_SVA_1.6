@@ -1,0 +1,23 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // Prettier, как форматтер по умолчанию
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+},
+  "git.autofetch": true,
+  "cSpell.language": "en, ru",
+  "[html][css][scss][javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "editor.tabSize": 2,
+  "scm.alwaysShowActions": true,
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.osx": "bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.windows":"bash"
+}

@@ -1,0 +1,198 @@
+.price {
+  &__container {
+    padding-left: 16px;
+    padding-right: 16px;
+    @media (min-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    @media (min-width: 1440px) {
+      padding-left: 32px;
+      padding-right: 32px;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+  &__table {
+    &--slider {
+      height: 210px;
+    }
+    @media (min-width: 768px) {
+      display: table;
+      width: 100%;
+      border: none;
+      margin-bottom: 20px;
+      border-spacing: 0 0;
+    }
+  }
+  &__thead {
+    @media (min-width: 768px) {
+      display: table-header-group;
+      color: $gray-text-color;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 16px;
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+  &__thead-row {
+    @media (min-width: 768px) {
+      margin-bottom: 16px;
+      display: table-row;
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+      }
+    }
+  }
+
+  &__head-cell {
+    @media (min-width: 768px) {
+      font-weight: 500;
+      text-align: left;
+      padding: 16px;
+      text-align: left;
+      display: table-cell;
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+      }
+    }
+  }
+
+  &__tbody {
+    @media (min-width: 768px) {
+      background-color: #fff;
+      display: table-row-group;
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+      }
+    }
+  }
+  &__tbody-row {
+    @media (min-width: 768px) {
+      display: table-row;
+      height: 64px;
+      &:not(:last-child) {
+        .price__tbody-cell {
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: $devider-color;
+          }
+        }
+      }
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+        display: flex;
+        position: relative;
+        width: 260px;
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-bottom: 15px; //не забыть убрать свойство
+        background-color: $background-light-color;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__paragraph {
+    color: $dark-text-color;
+  }
+
+  &__link-offer {
+    color: $dark-text-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url('../img/more.svg');
+    }
+  }
+
+  &__tbody-cell {
+    @media (min-width: 768px) {
+      display: table-cell;
+      padding: 16px;
+      font-size: 14px;
+      position: relative;
+      &:first-child::before {
+        margin-left: 16px;
+      }
+
+      &:last-child::before {
+        margin-right: 16px;
+      }
+    }
+    &--block-view {
+      @media (max-width: 767px) {
+        padding: 16px;
+
+        &:last-child {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+        &:nth-child(1)::before {
+          content: 'Ремонтные услуги';
+          display: block;
+          color: $gray-text-color;
+        }
+        &:nth-child(2)::before {
+          content: 'Цена';
+          display: block;
+          color: $gray-text-color;
+        }
+        &:nth-child(3)::before {
+          content: 'Срок';
+          display: block;
+          color: $gray-text-color;
+        }
+      }
+    }
+
+    // border-bottom: 2px solid $devider-color;
+  }
+  &__pagination {
+    width: fit-content !important;
+    margin-inline: auto;
+    margin-bottom: 16px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__submit-button {
+    width: 119px;
+  }
+}
